@@ -9,5 +9,6 @@ target 'LoginApp' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
 
 end

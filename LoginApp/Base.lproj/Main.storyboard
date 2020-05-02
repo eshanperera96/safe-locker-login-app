@@ -81,28 +81,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-yl-X1Y">
-                                <rect key="frame" x="32" y="212" width="256" height="124"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="124" id="Og4-LX-PHi"/>
-                                    <constraint firstAttribute="width" constant="256" id="RSK-pZ-uG0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8o-jA-SWR">
+                                <rect key="frame" x="137" y="392" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="verifyOpen:" destination="6om-nZ-x0q" eventType="touchUpInside" id="9ZP-uU-YeD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80D-f1-ZP4">
+                                <rect key="frame" x="74" y="173" width="173" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Q4c-yl-X1Y" firstAttribute="centerX" secondItem="TT2-AJ-lTe" secondAttribute="centerX" id="4WP-lx-1XK"/>
-                            <constraint firstItem="Q4c-yl-X1Y" firstAttribute="centerY" secondItem="TT2-AJ-lTe" secondAttribute="centerY" id="7s3-LK-3rg"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ifY-d4-hr8"/>
                     </view>
+                    <connections>
+                        <outlet property="secreteKey" destination="80D-f1-ZP4" id="AJ7-Ck-QYy"/>
+                        <outlet property="verifyBtn" destination="T8o-jA-SWR" id="Pf2-Ay-blP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4R-sR-fJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698.5507246376812" y="-540.40178571428567"/>
+            <point key="canvasLocation" x="1696.875" y="-540.84507042253517"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xSI-4s-8bC">

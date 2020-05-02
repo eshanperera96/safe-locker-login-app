@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Use Firebase library to configure APIs√
         FirebaseApp.configure()
+        
+        // self.registerForPushNotifications()
+        // self.getNotificationSettings()
+        
         return true
+    }
+    
+    func registerForPushNotifications() {
+      UNUserNotificationCenter.current() // 1
+        .requestAuthorization(options: [.alert, .sound, .badge]) { // 2
+          granted, error in
+          print("Permission granted: \(granted)") // 3
+      }
+    }
+    
+    func getNotificationSettings() {
+      UNUserNotificationCenter.current().getNotificationSettings { settings in
+        print("Notification settings: \(settings)")
+      }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
